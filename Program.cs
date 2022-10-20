@@ -4,16 +4,16 @@ namespace TownSuite_Programming_Test
 {
     public class Program
     {
+        private static readonly int N = 100;
+        private static readonly int BEGIN = 1;
         public static void Main(string[] args)
         {
-            Console.WriteLine("A program that prints the number from 1 to 100. Prints \"Support\" for multiple of 3, \"Training\" for multiple of 5, and" +
-                "print \"SupportTraining\" if both conditions are satisfied ");
-            printToN(100);
+            printToN(N);
         }
 
         public static void printToN(int n)
         {
-            for(int i =1;i <= n;i++)
+            for(int i = BEGIN;i <= n;i++)
             {
                 bool divBy3 = i % 3 == 0;
                 bool divBy5 = i % 5 == 0;
@@ -23,7 +23,7 @@ namespace TownSuite_Programming_Test
                 // Only one of these conditions can be true at any given iteration
                 if(divBoth)
                 {
-                    Console.WriteLine("Support Training");
+                    Console.WriteLine("SupportTraining");
                 }
                 else if(divBy3)
                 {
